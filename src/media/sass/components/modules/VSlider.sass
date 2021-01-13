@@ -1,13 +1,25 @@
 .slider-container
+    &__information
+        color: $white
+    &__title
+        font-size: 50px
+    &__description
+        font-size: 20px
+    &__button
+        outline: none
+        background-color: $light-gray
+        color: inherit
+        padding: 10px
     &__promotion
         &_our-coffe-shops
-            background-color: red
+            background: center/cover no-repeat url("../../../images/promo-images/preview-shop.jpg")
         &_magazine
-            background-color: pink
+            background: center/cover no-repeat url("../../../images/promo-images/magazine.jpg")
         &_friend-pass
-            background-color: blue
-        &_ivents
-            background-color: purple
+            background: center/cover no-repeat url("../../../images/promo-images/friend-pass.jpg")
+        &_events
+            background: center/cover no-repeat url("../../../images/promo-images/events.jpg")
+
     .slider-item
         padding-left: 100px
         display: flex
