@@ -11,3 +11,5 @@ export default {
   }
 }
 </script>
+
+<style lang="sass" src="@/media/sass/App.sass"></style>
