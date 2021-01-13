@@ -2,7 +2,8 @@
   <div class="slider-container">
     <Slider
       animation="normal"
-      v-bind:speed=4000
+      v-bind:speed=3000
+      v-bind:interval=6000
       v-bind:indicators=false
       v-model="sliderValue"
     >
@@ -12,10 +13,10 @@
         v-on:click="changeIndex(1);"
         v-bind:class="`slider-container__promotion_${promo.name}`"
       >
-        <div> 
-          <h1>{{promo.title}}</h1>
-          <p>{{promo.description}}</p>
-          <button>Узнать больше</button>
+        <div class="slider-container__information"> 
+          <h1 class="slider-container__title">{{promo.title}}</h1>
+          <p class="slider-container__description">{{promo.description}}</p>
+          <button class="slider-container__button">Узнать больше</button>
         </div>
       </SliderItem>
     </Slider>
@@ -66,7 +67,7 @@ export default {
           },
           {
             id: 4,
-            name:"ivents",
+            name:"events",
             title: "Будь в курсе последних событий",
             description: "Следи за нашими мероприятиями и принимай в них участие"
           }
