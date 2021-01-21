@@ -1,5 +1,8 @@
 .navigation
     width: 100%
+    background-color: $white
+    position: fixed
+    z-index: 999
     &__list
         display: flex
         justify-content: space-around
@@ -7,6 +10,7 @@
         cursor: pointer
         &:hover:not(.navigation__link_logo)
             border-bottom: 2px solid $black
+            margin-top: -2px
         &:nth-of-type(3)
             flex-shrink: 0
             margin: 0 50px
