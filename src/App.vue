@@ -4,6 +4,7 @@
     <v-slider :sliderPromosList="sliderPromosList"></v-slider>
     <new-dots-list :newDots="newDotsList"></new-dots-list>
     <you-tube-chanel-link></you-tube-chanel-link>
+    <events-promo :eventsList="eventsPromoList"></events-promo>
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import Navigation from '@/components/modules/Navigation';
 import VSlider from '@/components/modules/VSlider';
 import NewDotsList from '@/components/modules/NewDotsList'
 import YouTubeChanelLink from '@/components/modules/YouTubeChanelLink'
+import EventsPromo from '@/components/modules/EventsPromo.vue';
 
 export default {
   name: 'App',
@@ -19,13 +21,15 @@ export default {
     Navigation,
     VSlider,
     NewDotsList,
-    YouTubeChanelLink
+    YouTubeChanelLink,
+    EventsPromo
   },
   data() {
     return {
       newDotsList: [],
       navigationLinksList: [],
       sliderPromosList: [],
+      eventsPromoList:[],
     }
   },
   mounted() {                       //Данные со временем будут браться из Vuex
@@ -81,6 +85,20 @@ export default {
         title: "Будь в курсе последних событий",
         description: "Следи за нашими мероприятиями и принимай в них участие"
       }
+    ];
+    this.eventsPromoList = [
+      {
+        id: 1,
+        title: 'Чемпионат Сочи по серфингу',
+        name: 'surf-champ',
+        description: 'Отпраздновали наше 5-летие',
+      },
+      {
+        id: 2,
+        title: 'Coffee-point x ABC',
+        name: 'ski-champ',
+        description: 'Открыли сезон совместно с спортивным брендом ABC',
+      },
     ];
   }
 }
