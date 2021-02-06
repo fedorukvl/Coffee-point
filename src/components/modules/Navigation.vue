@@ -1,11 +1,10 @@
 <template>
-    <div class="navigation">
+    <div class="navigation" v-if="linksList">
         <ul class="navigation__list">
             <li
-                v-for="link in links"
-                v-bind:key="link.id"
-                class="navigation__link"
-                v-bind:class="{'navigation__link_logo': link.isLogo}"
+                v-for="link in linksList"
+                :key="link.id"
+                :class="link.isLogo ? 'navigation__link navigation__link_logo' : 'navigation__link'"
             > {{link.title}} 
             </li>
         </ul>
@@ -15,15 +14,10 @@
 <script>
 export default {
     name: "Navigation",
-    data() {
-        return {
-            links: [
-                { id: 1, title: "наши точки" },
-                { id: 2, title: "френд-пасс" },
-                { id: 3, isLogo: true, title: "coffee-point" },
-                { id: 4, title: "журнал" },
-                { id: 5, title: "наши точки" }
-            ]
+    props:{
+        linksList:{
+            type: Array,
+            required: true,
         }
     }
 }

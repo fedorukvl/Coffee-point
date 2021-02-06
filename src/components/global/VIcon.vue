@@ -15,7 +15,7 @@ export default {
         },
         title:{
             type: String,
-            default: none
+            default: ''
         }
     }
 }

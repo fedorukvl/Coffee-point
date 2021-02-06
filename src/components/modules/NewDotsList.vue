@@ -1,19 +1,19 @@
 <template>
-    <div class="newDotsList">
+    <div class="newDotsList" v-if="newDots">
         <h1 class="newDotsList__title">Новые точки</h1>
         <div class="newDotsList__promo-list">
             <div
-            v-for="dot in newDotsArray"
+            v-for="dot in newDots"
             v-bind:key="dot.id"
             class="newDotsList__dot"
             >
                 <img 
-                v-bind:style="{ 'backgroundImage' : 'url(' + require(`@/media/images/new-dots-promo-images/${dot.dotName}.webp`) + ')'}"
+                v-bind:style="{ 'backgroundImage' : 'url(' + require(`@/media/images/new-dots-promo-images/${dot.name}.webp`) + ')'}"
                 class="newDotsList__dot-img"
                 />
-                <h3 class="newDotsList__dot-name">{{dot.dotName}}</h3>
-                <p class="newDotsList__dot-city">{{dot.dotCity}}</p>
-                <p class="newDotsList__dot-address">{{dot.dotAddress}}</p>
+                <h3 class="newDotsList__dot-name">{{dot.name}}</h3>
+                <p class="newDotsList__dot-city">{{dot.city}}</p>
+                <p class="newDotsList__dot-address">{{dot.address}}</p>
             </div>
         </div>
     </div>
@@ -21,14 +21,11 @@
 
 <script>
 export default {
-    name: 'NewDotsList',
+    name: 'newDotsList',
     props: {
-        newDotsArray: {
+        newDots: {
             type: Array,
             required: true,
-            default(){
-                return []
-            } 
         }
     }
 }
