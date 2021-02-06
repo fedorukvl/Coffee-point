@@ -3,6 +3,7 @@
     <navigation></navigation>
     <v-slider></v-slider>
     <new-dots-list v-bind:newDotsArray="newDotsArray"></new-dots-list>
+    <you-tube-chanel-link></you-tube-chanel-link>
   </div>
 </template>
 
@@ -10,13 +11,15 @@
 import Navigation from '@/components/modules/Navigation';
 import VSlider from '@/components/modules/VSlider';
 import NewDotsList from '@/components/modules/NewDotsList'
+import YouTubeChanelLink from '@/components/modules/YouTubeChanelLink'
 
 export default {
   name: 'App',
   components: {
     Navigation,
     VSlider,
-    NewDotsList
+    NewDotsList,
+    YouTubeChanelLink
   },
   data() {
     return {
