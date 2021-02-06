@@ -1,5 +1,5 @@
 <template>
-    <div class="navigation" v-if="linksList">
+    <div class="navigation">
         <ul class="navigation__list">
             <li
                 v-for="link in linksList"

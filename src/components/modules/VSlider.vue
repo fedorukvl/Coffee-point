@@ -1,5 +1,5 @@
 <template>
-  <div class="slider-container" v-if="sliderPromosList">
+  <div class="slider-container" >
     <Slider
       animation="normal"
       v-bind:speed=3000

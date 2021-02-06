@@ -1,5 +1,5 @@
 <template>
-    <div class="newDotsList" v-if="newDots">
+    <div class="newDotsList" >
         <h1 class="newDotsList__title">Новые точки</h1>
         <div class="newDotsList__promo-list">
             <div

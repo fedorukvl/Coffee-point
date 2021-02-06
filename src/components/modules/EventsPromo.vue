@@ -1,5 +1,5 @@
 <template>
-    <div class="events-list" v-if="eventsList">
+    <div class="events-list">
         <h1 class="events-list__title">Ивенты</h1>
         <div class="events-list__promo-list">
             <div

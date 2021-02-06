@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <navigation :linksList="navigationLinksList"></navigation>
-    <v-slider :sliderPromosList="sliderPromosList"></v-slider>
-    <new-dots-list :newDots="newDotsList"></new-dots-list>
+    <navigation :linksList="navigationLinksList" v-if="navigationLinksList"></navigation>
+    <v-slider :sliderPromosList="sliderPromosList" v-if="sliderPromosList"></v-slider>
+    <new-dots-list :newDots="newDotsList" v-if="newDotsList"></new-dots-list>
     <you-tube-chanel-link></you-tube-chanel-link>
-    <events-promo :eventsList="eventsPromoList"></events-promo>
+    <events-promo :eventsList="eventsPromoList" v-if="eventsPromoList"></events-promo>
   </div>
 </template>
 
