@@ -1,0 +1,36 @@
+.registration-form
+    display: flex
+    width: 45%
+    height: 400px
+    padding: 10px
+    flex-direction: column
+    justify-content: space-around
+    margin: 0 auto
+    &__field
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        align-items: center
+    &__label
+        font-size: 20px
+    &__firstName,&__lastName,&__email,&__phone
+        width: 300px
+        height: 40px
+        border: 3px solid $light-gray
+        outline: none
+        font-size: 18px
+        border-radius: 4px
+        &_aproved
+            border: 3px solid green
+            outline: none
+        &:focus
+            border: 3px solid $black
+            outline: none
+    &__button
+        align-self: center
+        outline: none
+        border: 3px solid $black
+        border-radius: 4px
+        font-size: 15px
+        background: none
+        padding: 10px
