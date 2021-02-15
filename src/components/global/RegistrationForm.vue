@@ -5,11 +5,11 @@
                     <input 
                         type="text"
                         id="firstName"
-                        name="firstName" 
-                        v-model="userInfo.firstName" 
+                        name="firstName"
+                        placeholder="Крутой"
+                        @change="validateForm"
                         required
                         class="registration-form__firstName"
-                        :class="{'registration-form__firstName_aproved':userInfo.firstName}"
                     />
             </div>
             <div class="registration-form__field">
@@ -17,10 +17,10 @@
                     <input 
                         type="text" 
                         id="lastName"
-                        name="lastName" 
-                        v-model="userInfo.lastName"
+                        name="lastName"
+                        placeholder="Серфер"
+                        @change="validateForm"
                         class="registration-form__lastName"
-                        :class="{'registration-form__lastName_aproved':userInfo.lastName}"
                     />
             </div>
             <div class="registration-form__field">
@@ -28,11 +28,11 @@
                     <input 
                         type="email"
                         id="mail"
-                        name="mail" 
-                        v-model="userInfo.email" 
+                        name="email"
+                        placeholder="user@mail.com"
+                        @change="validateForm"
                         required
                         class="registration-form__email"
-                        :class="{'registration-form__email_aproved':userInfo.email}"
                     />
             </div>
             <div class="registration-form__field">
@@ -40,10 +40,10 @@
                     <input 
                         type="tel"
                         id="phone"
-                        name="phone" 
-                        v-model="userInfo.phoneNumber"
+                        name="phoneNumber"
+                        placeholder="+7(___)___-__-__"
+                        @change="validateForm"
                         class="registration-form__phone"
-                        :class="{'registration-form__phone_aproved':userInfo.phoneNumber}"
                         required
                     />
             </div>
@@ -53,6 +53,7 @@
         </form>
 </template>
 <script>
+import {formValidation} from '@/helpers/functions/formValidation.js';
 export default {
     name: 'RegistrationForm',
     data(){
@@ -66,6 +67,9 @@ export default {
         };
     },
     methods:{
+        validateForm(e){
+            if(formValidation(e)) this.userInfo[`${e.target.name}`] = e.target.value;
+        },
         registrateUser(){
             return true;
         }

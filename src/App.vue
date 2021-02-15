@@ -5,6 +5,7 @@
     <new-dots-list :newDots="newDotsList" v-if="newDotsList"></new-dots-list>
     <you-tube-chanel-link></you-tube-chanel-link>
     <events-promo :eventsList="eventsPromoList" v-if="eventsPromoList"></events-promo>
+    <registration-form></registration-form>
   </div>
 </template>
 
@@ -14,12 +15,14 @@ import VSlider from '@/components/modules/VSlider';
 import NewDotsList from '@/components/modules/NewDotsList'
 import YouTubeChanelLink from '@/components/modules/YouTubeChanelLink'
 import EventsPromo from '@/components/modules/EventsPromo.vue';
+import RegistrationForm from '@/components/global/RegistrationForm'
 
 export default {
   name: 'App',
   components: {
     Navigation,
     VSlider,
+    RegistrationForm,
     NewDotsList,
     YouTubeChanelLink,
     EventsPromo
